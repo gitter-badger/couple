@@ -13,8 +13,12 @@ You may contribute to this project via issues and pull requests, however, please
 
 ### Getting Started
 1. Fork the repository.
-2. Change the code.
-3. Create a pull request (ensuring that you follow the guidelines).
+2. Clone your forked version of the repository.
+3. Change the code.
+4. Run `npm install`.
+5. Run `gulp`.
+6. Commit and push your changes to Github.
+7. Create a pull request on Github (ensuring that you follow the guidelines).
 
 ### Directory Structure
 This library has been built using primarily CoffeeScript and all of the source is contained within the [src](/src) directory, and all of the testing for the library is contained within the [specs](/specs) directory.
