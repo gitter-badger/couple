@@ -1,0 +1,39 @@
+{
+  "name": "couple",
+  "version": "0.0.0",
+  "description": "A library to couple two objects.",
+  "main": "src/config.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "author": "Ryan Smith",
+  "licence": {
+    "type": "Creative Commons",
+    "url": "https://github.com/ryansmith94/Scorebook/blob/master/license.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ryansmith94/Scorebook.git"
+  },
+  "homepage": "https://www.github.com/ryansmith94/Scorebook",
+  "keywords": [
+    "cricket",
+    "scoring"
+  ],
+  "bugs": {
+    "url": "http://github.com/ryansmith94/Scorebook/issues"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.7.1",
+    "gulp": "^3.8.7",
+    "gulp-coffeelint": "^0.3.4",
+    "gulp-jasmine": "^1.0.0"
+  }
+}
