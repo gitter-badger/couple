@@ -2,7 +2,7 @@
   "name": "couple",
   "version": "0.0.0",
   "description": "A library to couple two objects.",
-  "main": "src/config.js",
+  "main": "src/export.js",
   "directories": {
     "doc": "docs",
     "test": "test"
