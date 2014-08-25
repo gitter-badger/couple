@@ -23,7 +23,7 @@ You may contribute to this project via issues and pull requests, however, please
 ### Directory Structure
 This library has been built using primarily CoffeeScript and all of the source is contained within the [src](/src) directory, and all of the testing for the library is contained within the [specs](/specs) directory.
 
-### Build Process
+### Build Process
 Gulp is being used to run the build process ([gulpfile.coffee](/gulpfile.coffee)). There are three tasks:
 
 1. lint: uses coffee-lint to lint the code ensuring consistency
