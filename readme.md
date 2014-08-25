@@ -1,6 +1,8 @@
 # Couple
 > A library for coupling two objects together. This is useful for nested pattern matching.
 
+[![Build Status](https://travis-ci.org/ryansmith94/couple.svg)](https://travis-ci.org/ryansmith94/couple)
+
 ## Users
 You will soon be able to install this via NPM using `npm install couple --save` and then `couple = require('couple')`. There may also be support for Browsers in the near future.
 
