@@ -52,13 +52,15 @@ describe('match', () ->
     # Run tests.
     for data in testData
         for dataMatch in data.matches
-            it('should match #{data.value} with #{dataMatch}', () ->
-                expect(match(dataMatch)(data.value), true)
+            it("should match #{data.value} with #{dataMatch}", () ->
+                expect(match(dataMatch)(data.value)).toBe(true)
+
             )
+
         for otherData in testData
             if data isnt otherData
-                for dataNoMatch in data.matches
-                    it('should not match #{data.value} with #{dataNoMatch}', () ->
-                        expect(match(dataNoMatch)(data.value), false)
+                for dataNoMatch in otherData.matches
+                    it("should not match #{data.value} with #{dataNoMatch}", () ->
+                        expect(match(dataNoMatch)(data.value)).toBe(false)
                     )
 )
