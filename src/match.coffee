@@ -6,19 +6,14 @@ type = require('./type')
 match = typedCouple()
 
 # Reference types.
-match.object = (a, b) ->
+match.object =
+match.array =
+match.reference = (a, b) ->
     if type(a) is type(b)
         keys = Object.keys(a)
         keys.filter((key) ->
             match(a[key])(b[key])
         ).length is keys.length
-    else false
-
-match.array = (a, b) ->
-    if type(a) is type(b)
-        a.filter((value, index) ->
-            match(value)(b[index])
-        ).length is a.length
     else false
 
 # Primitive types.

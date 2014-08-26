@@ -6,7 +6,9 @@ type = require('./type')
 merge = typedCouple()
 
 # Reference types.
-merge.object = (a, b) ->
+merge.object =
+merge.array =
+merge.reference = (a, b) ->
     if type(a) is type(b)
         obj = {}
 
@@ -21,15 +23,6 @@ merge.object = (a, b) ->
         )
 
         obj
-    else a
-
-merge.array = (a, b) ->
-    if type(a) is type(b)
-        arr = b.map((value) -> value)
-        a.forEach((value, index) ->
-            arr[index] = merge(value)(b[index])
-        )
-        arr
     else a
 
 # Primitive types.

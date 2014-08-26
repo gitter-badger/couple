@@ -7,7 +7,9 @@ match = require('./match')
 validate = typedCouple()
 
 # Reference types.
-validate.object = (a, b) ->
+validate.object =
+validate.array =
+validate.reference = (a, b) ->
     if type(a) is type(b)
         aKeys = Object.keys(a)
         bKeys = Object.keys(b)
@@ -26,8 +28,6 @@ validate.object = (a, b) ->
             ).length is aKeys.length
     else
         throw new Error("Expected an `object`, but found `#{b}`.")
-
-validate.array = match.array
 
 # Primitive types.
 validate.number =
