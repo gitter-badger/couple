@@ -26,6 +26,7 @@ match.number =
 match.string =
 match.boolean =
 match.primitive = (a, b) -> a is b
+match.undefined = (a, b) -> true
 
 # Operational types.
 match.function = (a, b) -> a(b)

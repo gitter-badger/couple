@@ -34,6 +34,7 @@ validate.number =
 validate.string =
 validate.boolean =
 validate.primitive = match.primitive
+validate.undefined = match.undefined
 
 # Operational types.
 validate.function = match.function
