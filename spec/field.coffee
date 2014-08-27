@@ -112,5 +112,36 @@ describe('field', () ->
         )
     )
 
+    describe('default', () ->
+        beforeEach(() ->
+            f.default({
+                hello: 'world'
+            })
+        )
+
+        it('should use default when property is not defined', () ->
+            f.extend({
+                hello: 'world'
+                world: 'hello'
+            })
+
+            expect(f({
+                world: 'hello'
+            })).toBe(true)
+        )
+
+        it('should not use default when property is defined', () ->
+            f.extend({
+                hello: 'foobar'
+                world: 'hello'
+            })
+
+            expect(f({
+                hello: 'foobar'
+                world: 'hello'
+            })).toBe(true)
+        )
+    )
+
 
 )
