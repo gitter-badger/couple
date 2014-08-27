@@ -10,7 +10,8 @@ field = () ->
     self = (value) ->
         value = merge(def)(value)
 
-        if states.length > 0
+        if not value? then not required
+        else if states.length > 0
             states.filter((state) ->
                 state = merge(state)(extend)
 
@@ -20,7 +21,7 @@ field = () ->
                     true
                 catch error
                     false
-            ).length is 1 or not required
+            ).length is 1
         else validate(extend)(value)
 
     self.extend = (obj) -> extend = merge(obj)(extend)
