@@ -23,8 +23,8 @@ field = () ->
 
     self.extend = (obj) -> extend = merge(obj)(extend)
     self.states = (newStates) -> states.concat(newStates)
-    self.required = (value) -> required = value
-    self.optional = (value) -> required = not value
+    self.required = (value) -> required = if value? then value else true
+    self.optional = (value) -> required = if value? then not value else false
     self.default = (obj) -> def = obj
 
 # API.
