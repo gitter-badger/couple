@@ -24,7 +24,7 @@ field = () ->
         else validate(extend)(mergedValue)
 
     self.extend = (obj) -> extend = merge(obj)(extend)
-    self.states = (newStates) -> states.concat(newStates)
+    self.states = (newStates) -> states = states.concat(newStates)
     self.required = (value) -> optional = if value? then not value else false
     self.optional = (value) -> optional = if value? then value else true
     self.default = (obj) -> def = obj
