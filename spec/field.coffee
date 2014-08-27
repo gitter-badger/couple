@@ -32,5 +32,24 @@ describe('field', () ->
         )
     )
 
+    describe('states', () ->
+        beforeEach(() ->
+            f.states([0, 1])
+        )
+
+        it('should validate if in one of the states', () ->
+            expect(f(0)).toBe(true)
+            expect(f(1)).toBe(true)
+        )
+
+        it('shouldn\'t validate if not in one of the states', () ->
+            expect(f(-1)).toBe(false)
+            expect(f({})).toBe(false)
+            expect(f([])).toBe(false)
+            expect(f(true)).toBe(false)
+            expect(f('')).toBe(false)
+        )
+    )
+
 
 )
