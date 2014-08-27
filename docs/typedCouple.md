@@ -1,7 +1,7 @@
 # Typed Couple
 
 ```coffee
-typedCouple = require('couple').couple.typed
+typedCouple = require('couple').typedCouple
 
 a = {}
 b = {}
