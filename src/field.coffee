@@ -8,7 +8,7 @@ field = () ->
     def = {}
 
     self = (value) ->
-        value = merge(def)(value)
+        actualValue = merge(def)(value)
 
         if not value? then optional
         else if states.length > 0
@@ -17,12 +17,12 @@ field = () ->
 
                 # Try to validate value with state.
                 try
-                    validate(state)(value)
+                    validate(state)(actualValue)
                     true
                 catch error
                     false
             ).length is 1
-        else validate(extend)(value)
+        else validate(extend)(actualValue)
 
     self.extend = (obj) -> extend = merge(obj)(extend)
     self.states = (newStates) -> states.concat(newStates)
