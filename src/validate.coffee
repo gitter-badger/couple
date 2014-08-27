@@ -1,5 +1,5 @@
 # Dependencies.
-typedCouple = require('./couple').typed
+typedCouple = require('./typedCouple')
 type = require('./type')
 match = require('./match')
 
