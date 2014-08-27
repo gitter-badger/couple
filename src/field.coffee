@@ -21,7 +21,7 @@ field = () ->
                 false
         ).length is 1 or not required
 
-    self.extend = (obj) -> extend = obj
+    self.extend = (obj) -> extend = merge(obj)(extend)
     self.states = (newStates) -> states.concat(newStates)
     self.required = (value) -> required = value
     self.optional = (value) -> required = not value
