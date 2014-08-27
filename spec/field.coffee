@@ -51,5 +51,66 @@ describe('field', () ->
         )
     )
 
+    describe('extend', () ->
+        beforeEach(() ->
+            f.extend({
+                hello: 'world'
+                world: 'hello'
+            })
+        )
+
+        it('should extend nothing', () ->
+            expect(f({
+                hello: 'world'
+                world: 'hello'
+            })).toBe(true)
+        )
+
+        it('should extend twice', () ->
+            f.extend({
+                world: 'bonjour'
+                foo: 'bar'
+            })
+
+            expect(f({
+                hello: 'world'
+                world: 'bonjour'
+                foo: 'bar'
+            })).toBe(true)
+        )
+
+        it('should extend states', () ->
+            f.states([{
+                one: 'one'
+            }, {
+                two: 'two'
+            }])
+
+            expect(f({
+                hello: 'world'
+                world: 'hello'
+                one: 'one'
+            })).toBe(true)
+
+            expect(f({
+                hello: 'world'
+                world: 'hello'
+                two: 'two'
+            })).toBe(true)
+
+            expect(f({
+                hello: 'world'
+                world: 'hello'
+                one: 'one'
+                two: 'two'
+            })).toBe(false)
+
+            expect(f({
+                hello: 'world'
+                world: 'hello'
+            })).toBe(false)
+        )
+    )
+
 
 )
