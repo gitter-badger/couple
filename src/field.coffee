@@ -30,5 +30,7 @@ field = () ->
     self.optional = (value) -> optional = if value? then value else true
     self.default = (obj) -> def = obj
 
+    self
+
 # API.
 module.exports = field
