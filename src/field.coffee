@@ -8,7 +8,7 @@ field = () ->
     def = undefined
 
     self = (value) ->
-        mergedValue = merge(def)(value)
+        mergedValue = merge(value)(def)
 
         if not value? then optional
         else if states.length > 0
