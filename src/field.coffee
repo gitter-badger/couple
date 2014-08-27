@@ -10,16 +10,18 @@ field = () ->
     self = (value) ->
         value = merge(def)(value)
 
-        states.filter((state) ->
-            state = merge(state)(extend)
+        if states.length > 0
+            states.filter((state) ->
+                state = merge(state)(extend)
 
-            # Try to validate value with state.
-            try
-                validate(state)(value)
-                true
-            catch error
-                false
-        ).length is 1 or not required
+                # Try to validate value with state.
+                try
+                    validate(state)(value)
+                    true
+                catch error
+                    false
+            ).length is 1 or not required
+        else validate(extend)(value)
 
     self.extend = (obj) -> extend = merge(obj)(extend)
     self.states = (newStates) -> states.concat(newStates)
