@@ -2,7 +2,7 @@ merge = require('./merge')
 validate = require('./validate')
 
 field = () ->
-    required = true
+    optional = false
     states = []
     extend = {}
     def = {}
@@ -10,7 +10,7 @@ field = () ->
     self = (value) ->
         value = merge(def)(value)
 
-        if not value? then not required
+        if not value? then optional
         else if states.length > 0
             states.filter((state) ->
                 state = merge(state)(extend)
@@ -26,8 +26,8 @@ field = () ->
 
     self.extend = (obj) -> extend = merge(obj)(extend)
     self.states = (newStates) -> states.concat(newStates)
-    self.required = (value) -> required = if value? then value else true
-    self.optional = (value) -> required = if value? then not value else false
+    self.required = (value) -> optional = if value? then not value else false
+    self.optional = (value) -> optional = if value? then value else true
     self.default = (obj) -> def = obj
 
 # API.
