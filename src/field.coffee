@@ -5,7 +5,7 @@ field = () ->
     optional = false
     states = []
     extend = {}
-    def = {}
+    def = undefined
 
     self = (value) ->
         mergedValue = merge(def)(value)
