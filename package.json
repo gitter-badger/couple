@@ -2,7 +2,7 @@
   "name": "npm-couple",
   "version": "1.0.1",
   "description": "A library to couple two objects.",
-  "main": "js/src/export.js",
+  "main": "build/export.js",
   "directories": {
     "doc": "docs",
     "test": "test"
@@ -21,8 +21,8 @@
   },
   "homepage": "https://www.github.com/ryansmith94/couple",
   "keywords": [
-    "cricket",
-    "scoring"
+    "coupling",
+    "objects"
   ],
   "bugs": {
     "url": "http://github.com/ryansmith94/couple/issues"
