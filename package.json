@@ -1,8 +1,8 @@
 {
   "name": "couple",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "description": "A library to couple two objects.",
-  "main": "src/export.js",
+  "main": "js/src/export.js",
   "directories": {
     "doc": "docs",
     "test": "test"
@@ -13,19 +13,19 @@
   "author": "Ryan Smith",
   "licence": {
     "type": "Creative Commons",
-    "url": "https://github.com/ryansmith94/Scorebook/blob/master/license.md"
+    "url": "https://github.com/ryansmith94/couple/blob/master/license.md"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/ryansmith94/Scorebook.git"
+    "url": "git://github.com/ryansmith94/couple.git"
   },
-  "homepage": "https://www.github.com/ryansmith94/Scorebook",
+  "homepage": "https://www.github.com/ryansmith94/couple",
   "keywords": [
     "cricket",
     "scoring"
   ],
   "bugs": {
-    "url": "http://github.com/ryansmith94/Scorebook/issues"
+    "url": "http://github.com/ryansmith94/couple/issues"
   },
   "engines": {
     "node": ">= 0.8.0"

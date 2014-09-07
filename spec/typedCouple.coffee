@@ -1,4 +1,4 @@
-typedCouple = require('../src/typedCouple')
+typedCouple = require('../build/typedCouple')
 
 # Tests typed couple.
 describe('couple.typed', () ->

@@ -1,4 +1,4 @@
-merge = require('../src/merge')
+merge = require('../build/merge')
 
 # Tests merge.
 describe('merge', () ->

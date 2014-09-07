@@ -3,30 +3,25 @@ gulp = require('gulp')
 
 # Testing.
 jasmine = require('gulp-jasmine')
-gulp.task('test', ['compileTests'], () ->
-    gulp.src('js/spec/**/*.js')
+gulp.task('test', () ->
+    gulp.src('spec/**/*.coffee')
         .pipe(jasmine())
 )
 
 # Linting.
 coffeelint = require('gulp-coffeelint')
 gulp.task('lint', () ->
-    gulp.src('coffee/**/*.coffee')
+    gulp.src(['**/*.coffee', '!node_modules/**/*.coffee'])
         .pipe(coffeelint('coffeelint.json'))
         .pipe(coffeelint.reporter())
 )
 
 # Compiling.
 coffee = require('gulp-coffee')
-gulp.task('compileTests', () ->
-    gulp.src('coffee/spec/**/*.coffee')
+gulp.task('compile', ['test'], () ->
+    gulp.src('src/**/*.coffee')
         .pipe(coffee())
-        .pipe(gulp.dest('js/spec'))
-)
-gulp.task('compileSource', ['test'], () ->
-    gulp.src('coffee/src/**/*.coffee')
-        .pipe(coffee())
-        .pipe(gulp.dest('js/src'))
+        .pipe(gulp.dest('build'))
 )
 
-gulp.task('default', ['lint', 'compileSource'])
+gulp.task('default', ['lint', 'compile'])

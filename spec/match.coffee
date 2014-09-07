@@ -1,7 +1,7 @@
-validate = require('../src/validate')
+match = require('../build/match')
 
 # Tests match.
-describe('validate', () ->
+describe('match', () ->
     # Test data.
     testData = [
         {
@@ -52,20 +52,15 @@ describe('validate', () ->
     # Run tests.
     for data in testData
         for dataMatch in data.matches
-            it("should validate #{data.value} with #{dataMatch}", () ->
-                try
-                    expect(validate(dataMatch)(data.value)).toBe(true)
-                catch err
-                    expect(false).toBe(true)
+            it("should match #{data.value} with #{dataMatch}", () ->
+                expect(match(dataMatch)(data.value)).toBe(true)
+
             )
 
         for otherData in testData
             if data isnt otherData
                 for dataNoMatch in otherData.matches
-                    it("should not validate #{data.value} with #{dataNoMatch}", () ->
-                        try
-                            expect(validate(dataNoMatch)(data.value)).toBe(false)
-                        catch err
-                            expect(false).toBe(false)
+                    it("should not match #{data.value} with #{dataNoMatch}", () ->
+                        expect(match(dataNoMatch)(data.value)).toBe(false)
                     )
 )

@@ -1,4 +1,4 @@
-field = require('../src/field')
+field = require('../build/field')
 
 # Tests field.
 describe('field', () ->

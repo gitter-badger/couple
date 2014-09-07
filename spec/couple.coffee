@@ -1,4 +1,4 @@
-couple = require('../src/couple')
+couple = require('../build/couple')
 
 # Tests normal couple.
 describe('couple', () ->

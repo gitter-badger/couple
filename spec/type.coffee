@@ -1,4 +1,4 @@
-type = require('../src/type')
+type = require('../build/type')
 
 # Tests type function.
 describe('type', () ->
