@@ -1,6 +1,6 @@
 {
   "name": "npm-couple",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A library to couple two objects.",
   "main": "build/export.js",
   "directories": {
