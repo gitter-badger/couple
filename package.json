@@ -1,5 +1,5 @@
 {
-  "name": "couple",
+  "name": "npm-couple",
   "version": "1.0.1",
   "description": "A library to couple two objects.",
   "main": "js/src/export.js",
