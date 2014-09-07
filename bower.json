@@ -1,0 +1,26 @@
+{
+  "name": "couple",
+  "version": "1.0.1",
+  "homepage": "https://github.com/ryansmith94/couple",
+  "authors": [
+    "Ryan Smith <0ryansmith1994@gmail.com>"
+  ],
+  "description": "A library to couple two objects.",
+  "main": "build/export.js",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "keywords": [
+    "coupling",
+    "objects"
+  ],
+  "license": "Creative Commons",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "spec",
+    "src"
+  ]
+}
