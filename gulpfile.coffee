@@ -4,16 +4,24 @@ gulp = require('gulp')
 # Testing.
 jasmine = require('gulp-jasmine')
 gulp.task('test', () ->
-    gulp.src('spec/*.coffee')
+    gulp.src('js/spec/**/*.js')
         .pipe(jasmine())
 )
 
 # Linting.
 coffeelint = require('gulp-coffeelint')
 gulp.task('lint', () ->
-    gulp.src('*.coffee')
+    gulp.src('coffee/**/*.coffee')
         .pipe(coffeelint('coffeelint.json'))
         .pipe(coffeelint.reporter())
 )
 
-gulp.task('default', ['lint', 'test'])
+# Compiling.
+coffee = require('gulp-coffee')
+gulp.task('compile', () ->
+    gulp.src('coffee/**/*.coffee')
+        .pipe(coffee())
+        .pipe(gulp.dest('js'))
+)
+
+gulp.task('default', ['lint', 'compile', 'test'])

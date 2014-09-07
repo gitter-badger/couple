@@ -1,4 +1,6 @@
-define(() ->
+if typeof define isnt 'function' then define = require('amdefine')(module)
+
+define([], () ->
     type = (value) ->
         valueType = typeof value
         switch valueType
