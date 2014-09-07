@@ -1,9 +1,7 @@
 (function() {
   var define;
 
-  if (typeof define !== 'function') {
-    define = require('amdefine')(module);
-  }
+  define = this.define || require('amdefine')(module);
 
   define(['./merge', './validate'], function(merge, validate) {
     return function() {

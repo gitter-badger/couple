@@ -1,9 +1,7 @@
 (function() {
   var define;
 
-  if (typeof define !== 'function') {
-    define = require('amdefine')(module);
-  }
+  define = this.define || require('amdefine')(module);
 
   define(['./couple', './typedCouple', './field', './match', './merge', './type', './validate'], function(couple, typedCouple, field, match, merge, type, validate) {
     return {
