@@ -3,7 +3,7 @@ gulp = require('gulp')
 
 # Testing.
 jasmine = require('gulp-jasmine')
-gulp.task('test', () ->
+gulp.task('test', ['compileTests'], () ->
     gulp.src('js/spec/**/*.js')
         .pipe(jasmine())
 )
@@ -18,10 +18,15 @@ gulp.task('lint', () ->
 
 # Compiling.
 coffee = require('gulp-coffee')
-gulp.task('compile', () ->
-    gulp.src('coffee/**/*.coffee')
+gulp.task('compileTests', () ->
+    gulp.src('coffee/spec/**/*.coffee')
         .pipe(coffee())
-        .pipe(gulp.dest('js'))
+        .pipe(gulp.dest('js/spec'))
+)
+gulp.task('compileSource', ['test'], () ->
+    gulp.src('coffee/src/**/*.coffee')
+        .pipe(coffee())
+        .pipe(gulp.dest('js/src'))
 )
 
-gulp.task('default', ['lint', 'compile', 'test'])
+gulp.task('default', ['lint', 'compileSource'])
