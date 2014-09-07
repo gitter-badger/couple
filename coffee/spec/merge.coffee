@@ -38,7 +38,7 @@ describe('merge', () ->
 
     results = {
         object: testAs.object
-        array:  testAs.array
+        array: testAs.array
         string: testAs.string
         number: testAs.number
         boolean: testAs.boolean

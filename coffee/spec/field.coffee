@@ -142,6 +142,4 @@ describe('field', () ->
             })).toBe(true)
         )
     )
-
-
 )
