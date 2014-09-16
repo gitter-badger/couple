@@ -31,19 +31,20 @@
         }
       };
       self.extend = function(obj) {
-        return extend = merge(obj)(extend);
+        extend = merge(obj)(extend);
+        return self;
       };
       self.states = function(newStates) {
-        return states = states.concat(newStates);
-      };
-      self.required = function(value) {
-        return optional = value != null ? !value : false;
+        states = states.concat(newStates);
+        return self;
       };
       self.optional = function(value) {
-        return optional = value != null ? value : true;
+        optional = value;
+        return self;
       };
       self["default"] = function(obj) {
-        return def = obj;
+        def = obj;
+        return self;
       };
       return self;
     };

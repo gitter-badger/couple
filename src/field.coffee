@@ -26,11 +26,18 @@ define([
                 ).length is 1
             else validate(extend)(mergedValue)
 
-        self.extend = (obj) -> extend = merge(obj)(extend)
-        self.states = (newStates) -> states = states.concat(newStates)
-        self.required = (value) -> optional = if value? then not value else false
-        self.optional = (value) -> optional = if value? then value else true
-        self.default = (obj) -> def = obj
+        self.extend = (obj) ->
+            extend = merge(obj)(extend)
+            self
+        self.states = (newStates) ->
+            states = states.concat(newStates)
+            self
+        self.optional = (value) ->
+            optional = value
+            self
+        self.default = (obj) ->
+            def = obj
+            self
 
         self
 )
