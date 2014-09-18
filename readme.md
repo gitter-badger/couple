@@ -1,4 +1,5 @@
 # Couple
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/ryansmith94/couple?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 > A library for coupling two objects together. This is useful for nested pattern matching.
 
 [![Build Status](https://travis-ci.org/ryansmith94/couple.svg)](https://travis-ci.org/ryansmith94/couple)
